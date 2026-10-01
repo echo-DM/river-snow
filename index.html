@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b5c8d2" />
+    <meta
+      name="description"
+      content="循着柳宗元的《江雪》，游览一片寂静的 3D 方块雪山河谷。"
+    />
+    <title>江雪 · 一片寂静的天地</title>
+  </head>
+  <body>
+    <main id="app">
+      <div id="world" aria-label="江雪三维雪山河谷"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <header class="masthead interface">
+        <div class="wordmark">江雪<span class="seal">柳</span></div>
+        <div class="edition">
+          一片寂静的天地<span>A WINTER POEM IN VOXELS</span>
+        </div>
+        <div class="author">唐 · 柳宗元</div>
+      </header>
+      <aside class="view-label interface" aria-live="polite">
+        <span id="chapter-number">第一境 · 千山</span>
+        <h1 id="chapter-title">千山鸟飞绝</h1>
+        <p id="chapter-caption">群山入雪，天地无声。</p>
+        <span class="view-rule"></span>
+      </aside>
+      <nav class="poem-nav interface" aria-label="四句诗景导览"></nav>
+      <div class="tools interface">
+        <button id="overview" title="查看全景（0）">
+          <span class="icon">◈</span>全景
+        </button>
+        <button id="reset" title="重置当前视角">↺<span>重置视角</span></button>
+        <button id="hide" title="隐藏界面（H）">⌑<span>隐去文字</span></button>
+      </div>
+      <footer class="footer interface">
+        <span>拖动环顾 · 滚轮远近</span><span>山河一境 · 四句入诗</span>
+      </footer>
+      <button id="restore" title="显示界面（H）" aria-label="显示界面">
+        ＋
+      </button>
+      <div id="loading" role="status">
+        <span class="loading-seal">雪</span>
+        <p>山河将入雪</p>
+        <small>正在铺开这片天地…</small>
+      </div>
+      <div id="error" role="alert" hidden>
+        <h1>暂时无法展开这片雪境</h1>
+        <p>请使用支持 WebGL 2 的桌面浏览器，并开启硬件加速后重新加载。</p>
+        <button id="retry">重新加载</button>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-01T08:32:44.988Z",
+  "url": "http://127.0.0.1:4173",
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+    "viewport": [
+      1440,
+      900
+    ],
+    "pixelRatio": 1
+  },
+  "checks": [
+    "Initial console has no rendering errors or uncaught exceptions",
+    "WebGL scene reaches ready state",
+    "mountains: arrives at authored camera in the original shared scene",
+    "mountains: one selected poem button",
+    "paths: arrives at authored camera in the original shared scene",
+    "paths: one selected poem button",
+    "boat: arrives at authored camera in the original shared scene",
+    "boat: one selected poem button",
+    "fishing: arrives at authored camera in the original shared scene",
+    "fishing: one selected poem button",
+    "Overview preserves the original world",
+    "Rapid selection arrives at the final requested view",
+    "Pointer input interrupts camera flight",
+    "Dragging rotates the camera",
+    "Wheel input changes viewing distance",
+    "Reset restores the authored framing",
+    "Hide removes the interface and offers restore",
+    "Restore brings the poem interface back",
+    "H toggles the interface in both directions",
+    "Keyboard 1 selects mountains",
+    "Keyboard 2 selects paths",
+    "Keyboard 3 selects boat",
+    "Keyboard 4 selects fishing",
+    "Keyboard 0 selects the full-world overview",
+    "Reduced-motion emulation is active",
+    "Reduced motion arrives directly without a camera flight",
+    "Normal motion can be restored",
+    "1920×1080 canvas and all navigation buttons fit the viewport",
+    "1024×740 desktop controls remain visible",
+    "All navigation and rendering checks leave a clean console",
+    "Context loss displays a readable recovery message",
+    "Reload recovers the 3D world after context loss",
+    "Runtime resources are served locally without external CDN requests",
+    "Final console has no errors and no uncaught exceptions"
+  ],
+  "rendering": [
+    {
+      "view": "mountains",
+      "fps": 60,
+      "drawCalls": 105,
+      "triangles": 224268,
+      "quality": "high"
+    },
+    {
+      "view": "paths",
+      "fps": 60,
+      "drawCalls": 71,
+      "triangles": 163944,
+      "quality": "high"
+    },
+    {
+      "view": "boat",
+      "fps": 60,
+      "drawCalls": 76,
+      "triangles": 174322,
+      "quality": "high"
+    },
+    {
+      "view": "fishing",
+      "fps": 60,
+      "drawCalls": 58,
+      "triangles": 145044,
+      "quality": "high"
+    },
+    {
+      "view": "fishing-1920",
+      "ready": true,
+      "selected": "fishing",
+      "flying": false,
+      "frames": 3857,
+      "averageFps": 60,
+      "drawCalls": 59,
+      "triangles": 146778,
+      "quality": "high",
+      "sceneId": "a7801442-ad4e-4287-ad30-9ada1983113b",
+      "camera": [
+        39,
+        9.5,
+        52
+      ],
+      "target": [
+        26,
+        3.2,
+        36
+      ]
+    }
+  ],
+  "console": "",
+  "errors": "",
+  "screenshotFiles": [
+    "01-mountains.png",
+    "02-paths.png",
+    "03-boat.png",
+    "04-fishing.png",
+    "05-overview.png",
+    "06-fishing-clean.png",
+    "07-desktop-1920.png"
+  ],
+  "boundaries": [
+    "Chromium desktop only; Safari, Firefox, and real devices not tested.",
+    "Performance is measured in this environment and is not a guarantee on other hardware.",
+    "Context-loss recovery tested; initial WebGL-disabled startup not emulated."
+  ]
+}

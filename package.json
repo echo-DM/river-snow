@@ -1,0 +1,21 @@
+{
+  "name": "river-snow",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "qa": "node scripts/acceptance.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.180.0",
+    "typescript": "5.8.3",
+    "vite": "6.4.3"
+  },
+  "packageManager": "pnpm@11.23.0"
+}
