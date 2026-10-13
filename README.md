@@ -36,6 +36,18 @@ pnpm build
 pnpm preview --port 4173
 ```
 
+生产预览地址为 `http://127.0.0.1:4173/river-snow/`。
+
+## GitHub Pages 部署
+
+部署成功后可访问：<https://echo-dm.github.io/river-snow/>。
+
+首次部署时，在 GitHub 仓库的 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**，然后将配置推送到 `main`。之后每次推送到 `main` 都会自动构建并部署；也可在 **Actions → Deploy to GitHub Pages → Run workflow** 中选择 `main` 手动触发。
+
+工作流使用 Node.js 24 和 `package.json` 指定的 pnpm 版本，通过 `pnpm install --frozen-lockfile` 安装依赖，再执行 `pnpm build` 并发布 `dist/`。部署状态和实际访问地址可在 Actions 运行记录中查看。
+
+Vite 的资源基础路径已设置为 `/river-snow/`；如果仓库改名或改用自定义域名，需要相应调整 `vite.config.ts` 中的 `base`。配置方式参考 [Vite 部署文档](https://vite.dev/guide/static-deploy.html#github-pages)。
+
 网页资源、纹理和模型均随项目提供；运行时使用系统中文字体。请通过本地服务器访问构建产物。
 
 ## 操作
@@ -63,9 +75,7 @@ pnpm preview --port 4173
 安装 agent-browser 后，在生产预览运行期间执行：
 
 ```bash
-pnpm qa
-# 或指定预览地址
-pnpm qa http://127.0.0.1:4173
+pnpm qa http://127.0.0.1:4173/river-snow/
 ```
 
 验收脚本通过 Chromium 的真实鼠标与键盘输入检查导览、共享世界、快速切换、拖动打断、旋转缩放、重置、界面隐藏、减少动态效果、桌面尺寸和上下文丢失恢复，并保存截图与 [检查结果](docs/qa/results.json)。详细覆盖范围见 [验收记录](docs/qa/acceptance.md)。
